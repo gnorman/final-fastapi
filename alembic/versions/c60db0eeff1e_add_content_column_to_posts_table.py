@@ -1,8 +1,8 @@
 """add content column to posts table
 
-Revision ID: 97055c937bd7
-Revises: 816982baa77c
-Create Date: 2023-11-22 05:44:40.380272
+Revision ID: c60db0eeff1e
+Revises: ddc8dbcb395e
+Create Date: 2023-11-29 20:21:20.254902
 
 """
 from typing import Sequence, Union
@@ -12,17 +12,17 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '97055c937bd7'
-down_revision: Union[str, None] = '816982baa77c'
+revision: str = 'c60db0eeff1e'
+down_revision: Union[str, None] = 'ddc8dbcb395e'
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
 
-def upgrade():
+def upgrade() -> None:
     op.add_column('posts', sa.Column('content', sa.String(), nullable=False))
     pass
 
 
-def downgrade():
+def downgrade() -> None:
     op.drop_column('posts', 'content')
     pass
