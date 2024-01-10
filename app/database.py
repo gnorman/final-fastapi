@@ -1,5 +1,8 @@
 from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
+# The declarative base function is was deprecated in sqlalcheny 2.0 (sqlalchemy.ext.declarative)>
+# It is now sqlalchemy.orm
+#from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import sessionmaker
 # Note: the module name is psycopg, not psycopg3
 #import psycopg
