@@ -73,7 +73,7 @@ jobs:
 
     steps:
       - name: deploying to ubuntu server
-        uses: appleboy/ssh-actions@master
+        uses: appleboy/ssh-action@master
         with:
           hosts: ${{ secrets.PROD_HOST }}
           username: ${{ secrets.PROD_USERNAME }}
