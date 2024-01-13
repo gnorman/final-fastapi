@@ -72,5 +72,14 @@ jobs:
     needs: [build]
 
     steps:
-      - name: deploying stuff
-        run: echo "going to deploy some stuff"
+      - name: deploying to ubuntu server
+        uses: appleboy/ssh-actions@master
+        with:
+          hosts: ${{ secrets.PROD_HOST }}
+          username: ${{ secrets.PROD_USERNAME }}
+          password: ${{ secrets.PROD_PASSWORD }}
+          script: |
+            cd app/src
+            git pull
+            echo {{ secrets.PROD_PASSWORD }} |sudo  -S systemctl restart api
+
