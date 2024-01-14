@@ -75,7 +75,7 @@ jobs:
       - name: deploying to ubuntu server
         uses: appleboy/ssh-action@v1.0.3
         with:
-          env:
+          settings:
           host: ${{ secrets.PROD_HOST }}
           username: ${{ secrets.PROD_USERNAME }}
           password: ${{ secrets.PROD_PASSWORD }}
