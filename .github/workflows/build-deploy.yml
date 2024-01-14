@@ -69,12 +69,13 @@ jobs:
   
   deploy:
     runs-on: ubuntu-latest
-    #needs: [build]
+    needs: [build]
 
     steps:
       - name: deploying to ubuntu server
         uses: appleboy/ssh-action@v1.0.3
         with:
+          env:
           host: ${{ secrets.PROD_HOST }}
           username: ${{ secrets.PROD_USERNAME }}
           password: ${{ secrets.PROD_PASSWORD }}
