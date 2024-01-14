@@ -73,9 +73,9 @@ jobs:
 
     steps:
       - name: deploying to ubuntu server
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v1.0.3
         with:
-          host: 24.199.74.147 # ${{ secrets.PROD_HOST }}
+          host: ${{ secrets.PROD_HOST }}
           username: ${{ secrets.PROD_USERNAME }}
           password: ${{ secrets.PROD_PASSWORD }}
           port: ${{ secrets.PROD_PORT }}
