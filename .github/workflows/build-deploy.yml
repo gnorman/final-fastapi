@@ -83,9 +83,47 @@ jobs:
           username: ${{ secrets.PROD_USERNAME }}
           key: ${{ secrets.PROD_SECRET_KEY }}
           port: ${{ secrets.PROD_PORT }}
-          password: ${{ secrets.PROD_PASSWORD }}
+          #password: ${{ secrets.PROD_PASSWORD }}
           script: |
             cd app/src
             git pull
             echo {{ secrets.PROD_PASSWORD }} | sudo -S systemctl restart api
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
