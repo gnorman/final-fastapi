@@ -83,7 +83,7 @@ jobs:
           username: ${{ secrets.PROD_USERNAME }}
           key: ${{secrets.PROD_SECRET_KEY}}
           port: ${{ secrets.PROD_PORT }}
-          password: ${{ secrets.PROD_PASSWORD }}
+          passphrase: ${{ secrets.PROD_PASSWORD }}
           script: |
             cd app/src
             git pull
