@@ -81,8 +81,8 @@ jobs:
         with:
           host: ${{ secrets.PROD_HOST }}
           username: ${{ secrets.PROD_USERNAME }}
-          privatekey: ${{ secrets.PROD_SECRET_KEY }}
-          #publickey: ${{ secrets.PPROD_PUB_KEY }}
+          key: ${{ secrets.PROD_SECRET_KEY }}
+          fingerprint: ${{ secrets.PPROD_PUB_KEY }}
           port: ${{ secrets.PROD_PORT }}
           passphrase: ${{ secrets.PROD_PASSWORD }}
           script: |
