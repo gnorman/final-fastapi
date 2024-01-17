@@ -84,7 +84,7 @@ jobs:
           key: ${{ secrets.PROD_SECRET_KEY }}
           #fingerprint: ${{ secrets.PPROD_PUB_KEY }}
           #port: ${{ secrets.PROD_PORT }}
-          #passphrase: ${{ secrets.PROD_PASSWORD }}
+          passphrase: ${{ secrets.PROD_PASSWORD }}
           script: |
             cd app/src
             git pull
